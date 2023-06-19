@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kikaijima Website</title>
+    <link href="style.css" rel="stylesheet">
+    <script
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+></script>
+</head>
+<body>
+
+    <div class="cursor"></div>
+
+    <div class="loading__wrapper">
+        <div class="loader--text">Loading...</div>
+        <div class="loader">
+          <span></span>
+        </div>
+      </div>
+    
+    <div id="container">
+        <nav id="nav">
+            <h1><a href="#area1">Kikaijima</a></h1>
+            <ul class="sticky-ul">
+                <li><a href="#area3" >자연&#183;문화</a></li>
+                <li><a href="#area4" >식문화</a></li>
+                <li><a href="#area5" >숙박시설</a></li>
+                <li><a href="#area6" >여행자 정보</a></li>
+                <li><a href="#area7" >전체 지도</a></li>
+            </ul>
+        </nav>
+
+        <aside id="scrollTop">▲</aside>
+
+            <section id="area1">
+                <div class="site-wrap">
+                    <section data-scroll class="ellipse"></section>
+                </div>
+            </section>
+
+            <section id="area2">
+                <div id="wrap">
+                    <div id="s1"></div>
+                    <div id="s2">
+                        <h2>喜界島へようこそ！</h2>
+                        <p>기카이섬에 오신 것을 환영합니다!</p>
+                    </div>
+                    <div id="s3"></div>
+                </div>
+            </section>
+
+            <section id="area3">
+                <div class="slider">
+                    <span style="--i:1;"><img src="./img/고무나무.jpeg"></span>
+                    <span style="--i:2;"><img src="./img/돌담.jpeg"></span>
+                    <span style="--i:3;"><img src="./img/오솔길.jpeg"></span>
+                    <span style="--i:4;"><img src="./img/문화재.jpeg"></span>
+                    <span style="--i:5;"><img src="./img/동굴.jpeg"></span>
+                </div>
+            </div>
+            </section>
+
+            <section id="area4">
+                <main>
+                <div class="app">
+                    <div class="cardList">
+                      <button class="cardList__btn btn btn--left">
+                        <div class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-left"></use>
+                          </svg>
+                        </div>
+                      </button>
+                  
+                      <div class="cards__wrapper">
+                        <div class="card current--card">
+                          <div class="card__image">
+                            <img src="./img/1.jpeg" alt="" />
+                          </div>
+                        </div>
+                  
+                        <div class="card next--card">
+                          <div class="card__image">
+                            <img src="./img/2.jpeg" alt="" />
+                          </div>
+                        </div>
+                  
+                        <div class="card previous--card">
+                          <div class="card__image">
+                            <img src="./img/3.jpeg" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <button class="cardList__btn btn btn--right">
+                        <div class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-right"></use>
+                          </svg>
+                        </div>
+                      </button>
+                    </div>
+                  
+                    <div class="infoList">
+                      <div class="info__wrapper">
+                        <div class="info current--info">
+                          <h1 class="text name">카라쥬리</h1>
+                          <h4 class="text location">염소요리</h4>
+                          <p class="text description">아마미 군도중에서도 기카이 섬 염소 요리가 번성했다.<br>
+                            염소 고기를 내장과 피를 사용하여 야채와 삶는 카라쥬리.<br>
+                            이외에도 염소 스프나 염소 회, 염소 초밥도 맛 볼 수 있다.</p>
+                        </div>
+                  
+                        <div class="info next--info">
+                          <h1 class="text name">아부라소멘</h1>
+                          <h4 class="text location">기름 소면</h4>
+                          <p class="text description">반찬에 간식에 섬 사람들이 사랑하는 가정 요리.<br>
+                            기카이 섬 것은 삶은 소면을 멸치 나 가다랭이,<br>
+                            다시마 등으로 우려낸 국물에 마는 것이 특징.<br>
+                            담백하고 부드러운  섬의 맛이다.</p>
+                        </div>
+                  
+                        <div class="info previous--info">
+                          <h1 class="text name">고마자타</h1>
+                          <h4 class="text location">설탕 과자</h4>
+                          <p class="text description">기카이 섬 특산 흑설탕 (사타)에 흰깨 듬뿍 넣은 과자가 "고마자타"<br>
+                            미네랄 풍미가 가득한 섬의 자랑스러운 과자.</p>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="app__bg">
+                      <div class="app__bg__image current--image">
+                        <img src="./img/1.jpeg" alt="" />
+                      </div>
+                      <div class="app__bg__image next--image">
+                        <img src="./img/2.jpeg" alt="" />
+                      </div>
+                      <div class="app__bg__image previous--image">
+                        <img src="./img/3.jpeg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <svg class="icons" style="display: none;">
+                    <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                      <polyline points='328 112 184 256 328 400'
+                             style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                    </symbol>
+                    <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                      <polyline points='184 112 328 256 184 400'
+                             style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                    </symbol>
+                  </svg>
+                </main>
+            </section>
+
+            <section id="area4-1">
+
+              <div class="container">
+
+                <h1 class="heading">기카이섬 식문화</h1>
+                
+                <div class="box-container">
+
+                  <div class="box">
+                    <div class="image">
+                      <img src="./img/1.jpeg">
+                    </div>
+                    <div class="content">
+                      <h3>카라쥬리</h3>
+                      <p>아마미 군도중에서도 기카이 섬 염소 요리가 번성. 염소 고기를 내장과 피를 사용하여 야채와 삶는 "카라쥬리". 이외에도 염소 스프나 염소 회, 염소 초밥도 맛 볼 수 있다.</p>
+                      <a href="#" class="btn">くわしい</a>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="image">
+                      <img src="./img/2.jpeg">
+                    </div>
+                    <div class="content">
+                      <h3>아부라소멘</h3>
+                      <p>반찬에 간식에 섬 사람들이 사랑하는 가정 요리. 기카이 섬 것은 삶은 소면을 멸치 나 가다랭이, 다시마 등으로 우려낸 국물에 마는 것이 특징. 담백하고 부드러운 섬의 맛이다.</p>
+                      <a href="#" class="btn">くわしい</a>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="image">
+                      <img src="./img/3.jpeg">
+                    </div>
+                    <div class="content">
+                      <h3>고마자타</h3>
+                      <p>기카이 섬 특산 흑설탕 (사타)에  흰깨 듬뿍 넣은 과자가 "고마자타" 미네랄 풍미가 가득한 섬의 자랑스러운 과자.</p>
+                      <a href="#" class="btn">くわしい</a>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="image">
+                      <img src="./img/4.jpeg">
+                    </div>
+                    <div class="content">
+                      <h3>캬 귤(캬는 기카이의 줄임말)</h3>
+                      <p>섬 안의 마당이나 길가에는 다양한 귤 나무가 있어 옛날부터 "캬 귤 (기카이  귤)"로 다른 섬으로 사랑 받고있다. 특히 향기의 게라지 (花良治)감귤이 유명하다.</p>
+                      <a href="#" class="btn">くわしい</a>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="image">
+                      <img src="./img/5.jpeg">
+                    </div>
+                    <div class="content">
+                      <h3>아마미 흑설탕소주</h3>
+                      <p>아마미군 섬만이 제조를 허가하고 있는 본격소주. 흑사탕이 원재료로, (술이)향 좋고 맛이 좋와 마시기 쉬운 것이 특징. 생수를 섞어서 마시거나 뜨거운 물을 넣는 것외 탄산이나 과일 주스와 섞어서 마시는 것도 별미.</p>
+                      <a href="#" class="btn">くわしい</a>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="image">
+                      <img src="./img/6.jpeg">
+                    </div>
+                    <div class="content">
+                      <h3>흰깨</h3>
+                      <p>생산량이 일본 제일 많다. 강한 향과 풍부한 맛을 자랑한다.</p>
+                      <a href="#" class="btn">くわしい</a>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="image">
+                      <img src="./img/7.jpeg">
+                    </div>
+                    <div class="content">
+                      <h3>참깨 드레싱</h3>
+                      <p>흰색 참깨가 듬뿍 들어간 드레싱 샐러드 나 요리를 더욱 맛있게 한다.</p>
+                      <a href="#" class="btn">くわしい</a>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="image">
+                      <img src="./img/8.jpeg">
+                    </div>
+                    <div class="content">
+                      <h3>흰색 참기름</h3>
+                      <p>흰색 참깨 맛을 꽉 응축한 참기름. 색다른 맛을 즐길 수 있다.</p>
+                      <a href="#" class="btn">くわしい</a>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="image">
+                      <img src="./img/9.jpeg">
+                    </div>
+                    <div class="content">
+                      <h3>게라지 후추</h3>
+                      <p>향기로운 게라지(花良治) 귤을 살린 후추는 요리의 멋진 악센트.</p>
+                      <a href="#" class="btn">くわしい</a>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="image">
+                      <img src="./img/10.jpeg">
+                    </div>
+                    <div class="content">
+                      <h3>마이니치 마메 오레 (우유에 넣어 먹는 상품)</h3>
+                      <p>기카이 섬의 흑설탕과 콩 가루를 사용한다. 우유를 부어서 마시는 것을 추천.</p>
+                      <a href="#" class="btn">くわしい</a>
+                    </div>
+                  </div>
+
+                  <div class="box">
+                    <div class="image">
+                      <img src="./img/11.jpeg">
+                    </div>
+                    <div class="content">
+                      <h3>기카이 토마토</h3>
+                      <p>단맛과 신맛의 균형이 절묘하다. 새빨간 섬의 특산품.</p>
+                      <a href="#" class="btn">くわしい</a>
+                    </div>
+                  </div>
+                  
+                </div>
+
+                <div id="load-more"> もっと見る </div>
+
+              </div>
+
+            </section>
+            
+            <section id="area5">
+              
+              <div class="map">
+                <input type="radio" name="slide" id="slide01" checked />
+                <input type="radio" name="slide" id="slide02" />
+                <input type="radio" name="slide" id="slide03" />
+                <input type="radio" name="slide" id="slide04" />
+                <input type="radio" name="slide" id="slide05" />
+                <input type="radio" name="slide" id="slide06" />
+                <input type="radio" name="slide" id="slide07" />
+    
+                <div class="slidewrap">
+                    <ul class="slidelist">
+                        <li>
+                            <a>
+                                <label for="slide07" class="left"></label>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6823.778985402883!2d129.95097406152!3d28.332675117109893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x351f87d2e62c2e47%3A0xba116e0896fc268e!2sVilla%20Kikai!5e0!3m2!1sko!2skr!4v1687129755713!5m2!1sko!2skr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <label for="slide02" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide01" class="left"></label>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6824.413576011935!2d129.93098670412317!3d28.322791253928298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x351f86dfbeabc023%3A0x3ddbc0b81cb01bd2!2z56KH5bGx5peF6aSo!5e0!3m2!1sko!2skr!4v1687132278384!5m2!1sko!2skr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <label for="slide03" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide02" class="left"></label>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8174.554319722363!2d129.92442965249043!3d28.32143982274223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x351f86df7f7d2805%3A0xf6e753778c4d59f3!2z44G_44Gq44Go44KE5peF6aSo!5e0!3m2!1sko!2skr!4v1687132346890!5m2!1sko!2skr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <label for="slide04" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide03" class="left"></label>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8174.603334837665!2d129.92268169460237!3d28.320802348160164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x351f872f29d23aef%3A0x34b98a9d55dceab9!2z44Kz44Kz44ON44OJ44Kz5Zac55WM5bO2!5e0!3m2!1sko!2skr!4v1687132409740!5m2!1sko!2skr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <label for="slide05" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide04" class="left"></label>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8174.730094737043!2d129.9290991971346!3d28.319153689274547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x351f86e15a8be07d%3A0xb7b831da7d9d3521!2z44Oa44Oz44K344On44Oz5Y2X6aKo!5e0!3m2!1sko!2skr!4v1687132443409!5m2!1sko!2skr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <label for="slide06" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide05" class="left"></label>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8174.7131491526425!2d129.9231083754609!3d28.31937409126763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x351f86e6850861a1%3A0x5032ec8b13836c3!2z44Km44Kj44O844Kv44Oq44O844OP44Km44K544O744OZ44Op44Km44Oz77yI6Zu76Kmx44Gn44GU6YCj57Wh44GP44Gg44GV44GE77yJ!5e0!3m2!1sko!2skr!4v1687132506307!5m2!1sko!2skr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <label for="slide07" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide06" class="left"></label>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8174.7131491526425!2d129.92248410478663!3d28.31937409126763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x351f86ef7df04b23%3A0xa23a088a663dd8f7!2z44GO44Gq44G-6I2YIOacrOmkqA!5e0!3m2!1sko!2skr!4v1687132540270!5m2!1sko!2skr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <label for="slide01" class="right"></label>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </section>
+
+            <section id="area6">
+                <div class="tap_content">
+                  <input type="radio" name="tabmenu" id="tab01" checked>
+                  <label for="tab01">교통수단</label>
+                  <input type="radio" name="tabmenu" id="tab02">
+                  <label for="tab02">로컬 버스 이용법</label>
+                  <input type="radio" name="tabmenu" id="tab03">
+                  <label for="tab03">도움말</label>
+
+                  <div class="conbox con1"><img src="./img/교통수단.jpg"></div>
+                  <div class="conbox con2"><img src="./img/버스이용방법.jpg"></div>
+                  <div class="conbox con3"><img src="./img/도움말.jpg"></div>
+                </div>
+            </section>
+
+            <section id="area7">
+                <div class="map-frame">
+                    <div class="map-content">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d65391.6793504939!2d129.98484484776918!3d28.329169359649175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x351f8753c7787727%3A0xf13a7c516cfcf251!2z6riw7Lm07J207KeA66eIIOyErA!5e0!3m2!1sko!2skr!4v1687080440474!5m2!1sko!2skr"
+                        width="960" height="540" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+        
+        <footer>
+            <p>© 가고시마현・가고시마현 관광연맹</p>
+        </footer>
+    </div>
+
+<script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
